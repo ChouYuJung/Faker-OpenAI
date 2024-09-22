@@ -47,3 +47,20 @@ def rand_message_id() -> Text:
 
 def rand_run_id() -> Text:
     return f"run_{rand_str(24)}"
+
+
+class FakerOpenaiId:
+    def id_chat_completion(self) -> Text:
+        return rand_chat_completion_id()
+
+    def id_assistant(self) -> Text:
+        return rand_assistant_id()
+
+    def id_thread(self) -> Text:
+        return rand_thread_id()
+
+    def id_message(self) -> Text:
+        return rand_message_id()
+
+    def id_run(self) -> Text:
+        return rand_run_id()
